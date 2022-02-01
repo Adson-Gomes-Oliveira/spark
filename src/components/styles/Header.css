@@ -1,6 +1,7 @@
 header {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .main-header {
@@ -45,5 +46,19 @@ header {
 }
 
 header .user-label span:last-of-type {
+  font-weight: 700;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: center;
+
+}
+
+.link {
+  text-align: center;
+  width: 33.333%;
+  padding: 10px 0;
+  background-color: rgb(39, 39, 39);
   font-weight: 700;
 }

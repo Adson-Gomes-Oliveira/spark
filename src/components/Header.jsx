@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/logo_Spark_negative.svg';
 import { getUser } from '../services/userAPI';
 import './styles/Header.css';
@@ -40,6 +41,32 @@ class Header extends Component {
                 ? 'Carregando...' : username}
             </span>
           </div>
+        </div>
+        <div className="nav-header">
+          <Link
+            to="/search"
+            data-testid="link-to-search"
+            className="link"
+            style={ { textDecoration: 'none', color: 'white' } }
+          >
+            <span>Pesquisar</span>
+          </Link>
+          <Link
+            to="/favorites"
+            data-testid="link-to-favorites"
+            className="link"
+            style={ { textDecoration: 'none', color: 'white' } }
+          >
+            <span>Favoritas</span>
+          </Link>
+          <Link
+            to="/profile"
+            data-testid="link-to-profile"
+            className="link"
+            style={ { textDecoration: 'none', color: 'white' } }
+          >
+            <span>Perfil</span>
+          </Link>
         </div>
       </header>
     );
