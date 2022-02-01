@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  background-color: #ff6600;
+}
+
+.main-header img{
+  width: 150px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 215px;
+}
+
+.logo-header span {
+  color: white;
+  font-size: 45px;
+}
+
+.user-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 6px 0;
+  width: 180px;
+}
+
+.user-label .material-icons {
+  align-self: flex-start;
+  font-size: 30px;
+  color: #ff7920;
+  margin-right: 15px;
+}
+
+header .user-label span:last-of-type {
+  font-weight: 700;
+}

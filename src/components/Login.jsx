@@ -36,37 +36,36 @@ class Login extends Component {
 
   render() {
     const { status, inputValue, load, redirect } = this.state;
-    const regularRender = (
-      <section data-testid="page-login" className="section-login">
-        <div>
-          <img className="logo-spark" src={ Logo } alt="Spark Logo" />
-          <form className="login-area">
-            <input
-              type="text"
-              placeholder="Nome (3 ou mais Caracteres)..."
-              data-testid="login-name-input"
-              onChange={ this.handleChangeInput }
-              value={ inputValue }
-            />
-            <button
-              type="button"
-              data-testid="login-submit-button"
-              onClick={ this.handleClickButton }
-              disabled={ status }
-            >
-              Entrar
-            </button>
-          </form>
-        </div>
-      </section>
-    );
 
     if (redirect === true) {
       return <Redirect to="/search" />;
     }
 
     return (
-      load === false ? regularRender : <Loading />
+      load === false ? (
+        <section data-testid="page-login" className="section-login">
+          <div>
+            <img className="logo-spark" src={ Logo } alt="Spark Logo" />
+            <form className="login-area">
+              <input
+                type="text"
+                placeholder="Nome (3 ou mais Caracteres)..."
+                data-testid="login-name-input"
+                onChange={ this.handleChangeInput }
+                value={ inputValue }
+              />
+              <button
+                type="button"
+                data-testid="login-submit-button"
+                onClick={ this.handleClickButton }
+                disabled={ status }
+              >
+                Entrar
+              </button>
+            </form>
+          </div>
+        </section>
+      ) : <Loading />
     );
   }
 }
