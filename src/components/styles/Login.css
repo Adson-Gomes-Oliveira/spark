@@ -1,0 +1,52 @@
+.section-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4) url('https://cdn.pixabay.com/photo/2016/11/22/21/36/audience-1850665_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+}
+
+.section-login div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+}
+
+.logo-spark {
+  width: 300px;
+}
+
+.login-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.login-area input {
+  width: 400px;
+  padding: 10px 10px;
+}
+
+.login-area input:focus {
+  border: 2px solid #FF6600;
+}
+
+.login-area button {
+  padding: 10px 0;
+  border: none;
+  background-color: #FF6600;
+  font-size: 17px;
+  font-weight: 700;
+  color:white;
+}
+
+.login-area button:disabled {
+  background-color: gray;
+}
