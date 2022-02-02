@@ -1,0 +1,57 @@
+.album-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+
+.albuns-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.album-link {
+  text-decoration: none;
+  color: black;
+}
+
+.album-area h3 {
+  align-self: flex-start;
+}
+
+.card-album {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 250px;
+  height: 230px;
+  margin: 10px 10px;
+  border: 1px solid #cdd0d4;
+}
+
+.card-album .infos {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100px;
+}
+
+.card-album span {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.card-album span:first-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3D495C;
+}
+
+.card-album span {
+  font-size: 14px;
+  color: #727272;
+}
+
