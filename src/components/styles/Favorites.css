@@ -1,0 +1,41 @@
+.page-favorites {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-favorites h3 {
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.page-favorites .musics-list {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+}
+
+.page-favorites .musics-list li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  width: 600px;
+}
+
+.art-name {
+  align-items: center;
+  display: flex;
+  justify-content: start;
+}
+
+.list-of-favorites .art-name img {
+  border-radius: 50px;
+  width: 50px;
+}
+
+.list-of-favorites .art-name span {
+  margin-left: 10px;
+}
