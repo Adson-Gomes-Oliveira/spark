@@ -16,10 +16,10 @@ class Album extends Component {
   }
 
   componentDidMount() {
-    this.getMusicsFromAlbum();
+    this.getDataFromAlbum();
   }
 
-  getMusicsFromAlbum = async () => {
+  getDataFromAlbum = async () => {
     const { match } = this.props;
     const { params } = match;
     const promise = await getMusics(params.id);

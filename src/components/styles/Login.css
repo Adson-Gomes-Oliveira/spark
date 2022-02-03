@@ -1,6 +1,9 @@
 .section-login {
   align-items: center;
-  background: darken no-repeat cover rgba(0, 0, 0, 0.4) url('https://cdn.pixabay.com/photo/2016/11/22/21/36/audience-1850665_960_720.jpg');
+  background: rgba(0, 0, 0, 0.4) url('../../assets/back_login.jpg');
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100vh;

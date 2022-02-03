@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './styles/MusicCardAlbum.css';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import LoadingComponentMusics from './LoadingComponentMusics';
 
 class MusicCard extends Component {
@@ -11,7 +11,28 @@ class MusicCard extends Component {
     this.state = {
       load: false,
       check: false,
+      favoriteSongs: [],
     };
+  }
+
+  componentDidMount() {
+    this.getFavoritedSongs();
+  }
+
+  // Consultada a lógica do PR do Carlos Rosa para realização deste requisito (9):
+  // https://github.com/tryber/sd-017-project-trybetunes/pull/111/commits/125690c1a1ed7feaccb3411fe897db0e005061cb
+  getFavoritedSongs = async () => {
+    const { id } = this.props;
+    this.setState({ load: true });
+    const recover = await getFavoriteSongs();
+    this.setState({ load: false, favoriteSongs: recover }, () => {
+      const { favoriteSongs } = this.state;
+      favoriteSongs.forEach((music) => {
+        if (music.trackId === id) {
+          this.setState({ check: true });
+        }
+      });
+    });
   }
 
   handleClickCheck = async (event, music) => {
