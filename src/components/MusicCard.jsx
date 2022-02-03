@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './styles/MusicCardAlbum.css';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import LoadingComponentMusics from './LoadingComponentMusics';
 
 class MusicCard extends Component {
@@ -37,6 +37,16 @@ class MusicCard extends Component {
 
   handleClickCheck = async (event, music) => {
     const { checked } = event.target;
+    const { check } = this.state;
+
+    if (check) {
+      this.setState({ load: true });
+      await removeSong(music);
+      this.setState({ check: false });
+      this.setState({ load: false });
+      return;
+    }
+
     this.setState({ check: checked });
     this.setState({ load: true });
     await addSong(music);
