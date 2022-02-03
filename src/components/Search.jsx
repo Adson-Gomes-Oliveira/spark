@@ -80,7 +80,7 @@ class Search extends Component {
               <input
                 id="search"
                 type="text"
-                placeholder="Musica, album ou artista"
+                placeholder="Album, artista ou banda"
                 data-testid="search-artist-input"
                 onChange={ this.handleInputChange }
                 value={ inputValue }

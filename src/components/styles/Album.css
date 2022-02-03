@@ -1,0 +1,30 @@
+.page-album {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-top: 50px;
+}
+
+.page-album .infos {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-top: 30px;
+} 
+
+.page-album .infos img {
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.page-album .infos span {
+  width: 250px;
+}
+
+.page-album .infos span:first-of-type {
+  font-weight: 700;
+  color: #FF6600;
+  margin-bottom: 10px;
+}

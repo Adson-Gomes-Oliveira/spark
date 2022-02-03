@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import getMusics from '../services/musicsAPI';
 import Header from './Header';
+import LoadingComponent from './LoadingComponent';
+import { addSong } from '../services/favoriteSongsAPI';
+import './styles/Album.css';
+import MusicCard from './MusicCard';
 
 class Album extends Component {
   constructor() {
@@ -10,11 +14,24 @@ class Album extends Component {
     this.state = {
       musicsToBeListed: [],
       artistAlbumInfos: {},
+      load: false,
+      check: false,
     };
   }
 
   componentDidMount() {
     this.getMusicsFromAlbum();
+  }
+
+  handleClickCheck = async (event, music) => {
+    const { checked } = event.target;
+
+    if (checked) {
+      this.setState({ load: true });
+      this.setState({ check: checked });
+      await addSong(music);
+      this.setState({ load: false });
+    }
   }
 
   getMusicsFromAlbum = async () => {
@@ -26,22 +43,10 @@ class Album extends Component {
   }
 
   render() {
-    const { musicsToBeListed, artistAlbumInfos } = this.state;
+    const { musicsToBeListed, artistAlbumInfos, load, check } = this.state;
     const { artistName, artworkUrl100, collectionName } = artistAlbumInfos;
     const list = musicsToBeListed.slice(1);
-    const musicsList = list.map((music) => {
-      const { trackName, previewUrl } = music;
-      return (
-        <li key={ trackName }>
-          <span>{trackName}</span>
-          <audio data-testid="audio-component" src={ previewUrl } controls>
-            <track kind="captions" />
-            O seu navegador não suporta o elemento
-            <code>audio</code>
-          </audio>
-        </li>
-      );
-    });
+
     return (
       <>
         <Header />
@@ -52,9 +57,14 @@ class Album extends Component {
             <span data-testid="artist-name">{artistName}</span>
           </div>
           <div className="musics">
-            <ul>{musicsList}</ul>
+            {load ? <LoadingComponent /> : <MusicCard
+              list={ list }
+              handleClickCheck={ this.handleClickCheck }
+              check={ check }
+            />}
           </div>
         </section>
+        )
       </>
     );
   }

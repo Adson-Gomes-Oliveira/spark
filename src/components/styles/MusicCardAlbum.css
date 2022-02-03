@@ -1,0 +1,19 @@
+.music-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    width: 430px;
+}
+
+.divisor-musics {
+  height: 1px;
+  width: 100%;
+  background-color: #E1E5EB;
+}
