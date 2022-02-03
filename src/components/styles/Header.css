@@ -5,20 +5,20 @@ header {
 }
 
 .main-header {
+  align-items: center;
+  background-color: #f60;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 15px;
-  background-color: #ff6600;
+  padding: 15px;
 }
 
-.main-header img{
+.main-header img {
   width: 150px;
 }
 
 .logo-header {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   width: 215px;
 }
@@ -29,19 +29,19 @@ header {
 }
 
 .user-label {
-  display: flex;
-  justify-content: center;
   align-items: center;
   background: white;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
   padding: 6px 0;
   width: 180px;
 }
 
 .user-label .material-icons {
   align-self: flex-start;
-  font-size: 30px;
   color: #ff7920;
+  font-size: 30px;
   margin-right: 15px;
 }
 
@@ -52,13 +52,12 @@ header .user-label span:last-of-type {
 .nav-header {
   display: flex;
   justify-content: center;
-
 }
 
 .link {
-  text-align: center;
-  width: 33.333%;
-  padding: 10px 0;
   background-color: rgb(39, 39, 39);
   font-weight: 700;
+  padding: 10px 0;
+  text-align: center;
+  width: 33.333%;
 }

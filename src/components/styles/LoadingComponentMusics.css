@@ -1,0 +1,31 @@
+.loading-component-musics {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+@keyframes grow {
+
+  0% { transform: scale(50%); }
+
+  100% { transform: scale(100%);}
+}
+
+.loading-component-musics img {
+  animation: grow 1s alternate infinite;
+  width: 100px;
+}
+
+.divisor-h {
+  background-color: #e1e5eb;
+  height: 30px;
+  margin: 0 15px;
+  width: 2px;
+}
+
+.loading-component-musics span {
+  font-size: 14px;
+  font-weight: 700;
+}

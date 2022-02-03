@@ -1,9 +1,9 @@
 .page-album {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 90%;
   margin-top: 50px;
+  width: 90%;
 }
 
 .page-album .infos {
@@ -12,7 +12,7 @@
   flex-direction: column;
   margin-right: 30px;
   margin-top: 30px;
-} 
+}
 
 .page-album .infos img {
   margin-bottom: 20px;
@@ -24,7 +24,7 @@
 }
 
 .page-album .infos span:first-of-type {
+  color: #f60;
   font-weight: 700;
-  color: #FF6600;
   margin-bottom: 10px;
 }

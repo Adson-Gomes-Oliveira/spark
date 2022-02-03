@@ -1,21 +1,18 @@
 .section-login {
+  align-items: center;
+  background: darken no-repeat cover rgba(0, 0, 0, 0.4) url('https://cdn.pixabay.com/photo/2016/11/22/21/36/audience-1850665_960_720.jpg');
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4) url('https://cdn.pixabay.com/photo/2016/11/22/21/36/audience-1850665_960_720.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
+  justify-content: center;
 }
 
 .section-login div {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   height: 300px;
+  justify-content: space-around;
 }
 
 .logo-spark {
@@ -25,26 +22,26 @@
 .login-area {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100px;
+  justify-content: space-between;
 }
 
 .login-area input {
+  padding: 10px;
   width: 400px;
-  padding: 10px 10px;
 }
 
 .login-area input:focus {
-  border: 2px solid #FF6600;
+  border: 2px solid #f60;
 }
 
 .login-area button {
-  padding: 10px 0;
+  background-color: #f60;
   border: none;
-  background-color: #FF6600;
+  color: white;
   font-size: 17px;
   font-weight: 700;
-  color:white;
+  padding: 10px 0;
 }
 
 .login-area button:disabled {

@@ -5,15 +5,43 @@
 }
 
 .music {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px;
-    width: 430px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  width: 490px;
+}
+
+.audio-favorite {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+}
+
+.favorite {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.music audio {
+  width: 270px;
 }
 
 .divisor-musics {
+  background-color: #e1e5eb;
   height: 1px;
   width: 100%;
-  background-color: #E1E5EB;
+}
+
+.favorite input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.favorite input:checked ~ .material-icons {
+  color: #f60;
 }
