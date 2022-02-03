@@ -1,0 +1,87 @@
+.page-profile-edit {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.page-profile-edit form  {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: center;
+  width: 400px;
+}
+
+.page-profile-edit .image-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-profile-edit .image-edit .image-link {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.page-profile-edit .image-edit img {
+  width: 120px;
+  height: 120px;
+  border-radius: 200px;
+}
+
+.page-profile-edit .image-edit input {
+  width: 240px;
+  height: 40px;
+}
+
+.page-profile-edit form label {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.page-profile-edit form label span:first-of-type {
+  font-weight: 700;
+  font-size: 18px;
+  color: #3d495c;
+  margin-bottom: 5px;
+}
+
+.page-profile-edit form label span:last-of-type {
+  font-weight: 400;
+  font-size: 14px;
+  color: #3d495c;
+  margin-bottom: 10px;
+}
+
+.page-profile-edit form label input {
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #3d495c;
+  background-color: #f0f2f5;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.page-profile-edit form label input:focus {
+  outline: none;
+}
+
+.page-profile-edit form button {
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  border: none;
+  background-color: #f60;
+  cursor: pointer;
+}
+
+.page-profile-edit form button:disabled {
+  background-color: gray;
+}

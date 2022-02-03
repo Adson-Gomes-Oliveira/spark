@@ -40,15 +40,15 @@ class Profile extends Component {
                   <button type="button">Editar perfil</button>
                 </Link>
               </div>
-              <span className="user-name">
+              <span className="user-info">
                 Nome
                 <span>{name}</span>
               </span>
-              <span className="user-email">
+              <span className="user-info">
                 Email
                 <span>{email}</span>
               </span>
-              <span className="user-description">
+              <span className="user-info">
                 Descrição
                 <p>{description}</p>
               </span>

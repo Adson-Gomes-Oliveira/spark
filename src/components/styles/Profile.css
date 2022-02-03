@@ -14,7 +14,7 @@
   width: 400px;
 }
 
-.user-name {
+.user-info {
   color: #3d495c;
   display: flex;
   flex-direction: column;
@@ -25,31 +25,23 @@
   margin-top: 15px;
 }
 
-.user-name span {
+.user-info span, p {
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
 }
 
-.user-email {
-  color: #3d495c;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  margin-left: 15px;
-}
-
-.user-description {
-  color: #3d495c;
-  font-size: 20px;
-  font-weight: 700;
-  margin-left: 15px;
-}
-
 .edit {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.edit img {
+  width: 120px;
+  height: 120px;
+  border-radius: 200px;
 }
 
 .edit button {
@@ -57,5 +49,6 @@
   border-style: none;
   color: white;
   font-weight: 700;
-  padding: 13px;
+  padding: 20px;
+  cursor: pointer;
 }
