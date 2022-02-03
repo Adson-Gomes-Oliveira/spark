@@ -15,7 +15,6 @@ class Album extends Component {
       musicsToBeListed: [],
       artistAlbumInfos: {},
       load: false,
-      check: false,
     };
   }
 
@@ -28,7 +27,6 @@ class Album extends Component {
 
     if (checked) {
       this.setState({ load: true });
-      this.setState({ check: checked });
       await addSong(music);
       this.setState({ load: false });
     }
@@ -49,6 +47,7 @@ class Album extends Component {
 
     return (
       <>
+        {load && <LoadingComponent />}
         <Header />
         <section data-testid="page-album" className="page-album">
           <div className="infos">
@@ -57,11 +56,10 @@ class Album extends Component {
             <span data-testid="artist-name">{artistName}</span>
           </div>
           <div className="musics">
-            {load ? <LoadingComponent /> : <MusicCard
+            <MusicCard
               list={ list }
               handleClickCheck={ this.handleClickCheck }
-              check={ check }
-            />}
+            />
           </div>
         </section>
         )
