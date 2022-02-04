@@ -25,6 +25,10 @@
   width: 600px;
 }
 
+.page-favorites .audio-favorite {
+  width: 70%;
+}
+
 .art-name {
   align-items: center;
   display: flex;

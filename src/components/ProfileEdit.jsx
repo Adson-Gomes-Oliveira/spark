@@ -16,6 +16,7 @@ class ProfileEdit extends Component {
       descriptionValue: '',
       imageValue: '',
       disableButton: true,
+      saveButtonText: 'Salvar',
     };
   }
 
@@ -24,9 +25,9 @@ class ProfileEdit extends Component {
   }
 
   handleClickSave = async () => {
+    this.setState({ saveButtonText: 'Salvando informações do perfil...' });
     const { nameValue, emailValue, descriptionValue, imageValue } = this.state;
     const { history } = this.props;
-    this.setState({ load: true });
     const profileToSave = {
       name: nameValue,
       email: emailValue,
@@ -37,19 +38,21 @@ class ProfileEdit extends Component {
     history.push('/profile');
   }
 
+  validateForm = () => {
+    const { nameValue, emailValue, descriptionValue, imageValue } = this.state;
+    const arrOfValues = [nameValue, emailValue, descriptionValue, imageValue];
+    const emailValidation = /\S+@\S+\.\S+/;
+    if (
+      !(arrOfValues.includes(''))
+      && emailValidation.test(emailValue)
+    ) {
+      this.setState({ disableButton: false });
+    }
+  }
+
   handleChangeInput = (event) => {
     const { value, id } = event.target;
-    this.setState({ [id]: value }, () => {
-      const { nameValue, emailValue, descriptionValue, imageValue } = this.state;
-      const arrOfValues = [nameValue, emailValue, descriptionValue, imageValue];
-      const emailValidation = /\S+@\S+\.\S+/;
-      if (
-        !(arrOfValues.includes(''))
-        && emailValidation.test(emailValue)
-      ) {
-        this.setState({ disableButton: false });
-      }
-    });
+    this.setState({ [id]: value }, this.validateForm());
   }
 
   getUserInfos = async () => {
@@ -58,6 +61,7 @@ class ProfileEdit extends Component {
     this.setState({ emailValue: data.email });
     this.setState({ descriptionValue: data.description });
     this.setState({ imageValue: data.image });
+    this.validateForm();
     this.setState({ load: false });
   }
 
@@ -68,7 +72,8 @@ class ProfileEdit extends Component {
       emailValue,
       descriptionValue,
       imageValue,
-      disableButton } = this.state;
+      disableButton,
+      saveButtonText } = this.state;
     return (
       <>
         <Header />
@@ -128,7 +133,7 @@ class ProfileEdit extends Component {
                 onClick={ this.handleClickSave }
                 disabled={ disableButton }
               >
-                Salvar
+                {saveButtonText}
               </button>
             </form>
           </section>
