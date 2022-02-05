@@ -25,7 +25,7 @@ class ProfileEdit extends Component {
   }
 
   handleClickSave = async () => {
-    this.setState({ saveButtonText: 'Salvando informações do perfil...' });
+    this.setState({ saveButtonText: 'Editar perfil' });
     const { nameValue, emailValue, descriptionValue, imageValue } = this.state;
     const { history } = this.props;
     const profileToSave = {

@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.page-profile-edit form  {
+.page-profile-edit form {
   display: flex;
   flex-direction: column;
   height: 450px;
@@ -15,10 +15,10 @@
 }
 
 .page-profile-edit .image-edit {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -29,14 +29,23 @@
 }
 
 .page-profile-edit .image-edit img {
-  width: 120px;
-  height: 120px;
   border-radius: 200px;
+  height: 120px;
+  width: 120px;
+}
+
+.page-profile-edit form label input {
+  background-color: #f0f2f5;
+  border: none;
+  border-bottom: 2px solid #3d495c;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .page-profile-edit .image-edit input {
-  width: 240px;
   height: 40px;
+  width: 240px;
 }
 
 .page-profile-edit form label {
@@ -46,26 +55,17 @@
 
 
 .page-profile-edit form label span:first-of-type {
-  font-weight: 700;
-  font-size: 18px;
   color: #3d495c;
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
 .page-profile-edit form label span:last-of-type {
-  font-weight: 400;
-  font-size: 14px;
   color: #3d495c;
+  font-size: 14px;
+  font-weight: 400;
   margin-bottom: 10px;
-}
-
-.page-profile-edit form label input {
-  height: 30px;
-  border: none;
-  border-bottom: 2px solid #3d495c;
-  background-color: #f0f2f5;
-  padding: 10px;
-  margin-bottom: 15px;
 }
 
 .page-profile-edit form label input:focus {
@@ -73,13 +73,13 @@
 }
 
 .page-profile-edit form button {
-  padding: 15px;
+  background-color: #f60;
+  border: none;
+  color: white;
+  cursor: pointer;
   font-size: 15px;
   font-weight: 700;
-  color: white;
-  border: none;
-  background-color: #f60;
-  cursor: pointer;
+  padding: 15px;
 }
 
 .page-profile-edit form button:disabled {

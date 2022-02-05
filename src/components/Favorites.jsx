@@ -54,7 +54,6 @@ class Favorite extends Component {
 
             <label
               className="favorite"
-              data-testid={ `checkbox-music-${id}` }
               htmlFor={ id }
             >
               Favorita
