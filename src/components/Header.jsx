@@ -32,7 +32,6 @@ class Header extends Component {
         <div className="main-header">
           <div className="logo-header">
             <img src={ Logo } alt="Logo Spark" />
-            <span className="material-icons"> headphones </span>
           </div>
           <div className="user-label">
             <span className="material-icons"> account_circle </span>
