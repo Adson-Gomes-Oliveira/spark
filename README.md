@@ -4,7 +4,7 @@
 <br />
 <br />
 <div align="center">
-Projeto em React para um player de músicas onde é possível pesquisar artistas, bandas ou albuns e ouvir prévias de músicas com 30 segundos.
+Projeto em React de um player de músicas onde é possível pesquisar artistas, bandas ou albuns e ouvir prévias de músicas com 30 segundos.
 Milhares de músicas disponíveis.
 </div>
 <br />
